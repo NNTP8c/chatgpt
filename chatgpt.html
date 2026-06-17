@@ -1,0 +1,509 @@
+#log in
+
+<button
+    class="btn relative group-focus-within/dialog:focus-visible:[outline-width:1.5px] group-focus-within/dialog:focus-visible:[outline-offset:2.5px] group-focus-within/dialog:focus-visible:[outline-style:solid] group-focus-within/dialog:focus-visible:[outline-color:var(--text-primary)] btn-secondary btn-large w-full"
+>
+    <div class="flex items-center justify-center">
+        Log in
+    </div>
+</button>
+
+#copy mail
+
+<button class="action-tile" id="copy-mailbox" type="button">
+    <span class="action-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="9" y="7" width="10" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"></rect>
+        <rect x="5" y="3" width="10" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"></rect>
+      </svg>
+    </span>
+    <span>Sao chép email</span>
+</button>
+
+#tạo ramdom
+<button
+  class="action-tile"
+  id="random-domain-mailbox"
+  type="button"
+>
+  <span class="action-icon">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M20 5v6h-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      ></path>
+      <path
+        d="M20 11a8 8 0 1 0 2 5.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      ></path>
+    </svg>
+  </span>
+
+  <span>Tạo random miền</span>
+</button>
+
+
+#gpt chỗ nhập mail
+<input
+  id="email"
+  name="email"
+  type="email"
+  value=""
+  aria-label="Email address"
+  placeholder="Email address"
+  autocomplete="email webauthn"
+  class="block w-full border-0 p-0 shadow-none outline-hidden focus-within:shadow-none focus-within:ring-0 focus-within:outline-hidden focus:border-none focus:ring-0 sm:text-sm bg-token-main-surface-primary text-token-text-primary placeholder-gray-500 w-full rounded-full! text-base! sm:text-base! px-5! py-3! h-13!"
+>
+
+#continue
+<button
+  class="btn relative group-focus-within/dialog:focus-visible:[outline-width:1.5px] group-focus-within/dialog:focus-visible:[outline-offset:2.5px] group-focus-within/dialog:focus-visible:[outline-style:solid] group-focus-within/dialog:focus-visible:[outline-color:var(--text-primary)] btn-primary mt-1.5 h-13 w-full rounded-full text-base"
+  type="submit"
+>
+  <div class="flex items-center justify-center">
+    Continue
+  </div>
+</button>
+
+# chỗ nhập mã gửi về mail
+<div class="_section_f5i74_7 _fields_f5i74_53">
+    <div class="react-aria-TextField" data-rac="">
+        <div class="_root_1i5mj_51">
+            <div class="_fieldFootprint_1i5mj_59 _typeable_1i5mj_74">
+                <label
+                    class="_typeableLabel_1i5mj_74"
+                    id="react-aria-_R_dhj5H1_"
+                    for="_R_35H5_-code"
+                >
+                    <div class="_typeableLabelTextPositioner_1i5mj_88">
+                        <div class="_typeableLabelText_1i5mj_88">
+                            Mã
+                        </div>
+                    </div>
+                </label>
+
+                <input
+                    aria-describedby="_R_35H1_"
+                    id="_R_35H5_-code"
+                    type="text"
+                    autocomplete="one-time-code"
+                    maxlength="6"
+                    placeholder="Mã"
+                    inputmode="numeric"
+                    aria-labelledby="react-aria-_R_dhj5H1_"
+                    class="_input_1kwl2_1 _target_1i5mj_134"
+                    autofocus=""
+                    form="_R_35H5_"
+                    data-rac=""
+                    name="code"
+                    value=""
+                >
+            </div>
+
+            <span aria-live="polite" aria-atomic="true"></span>
+        </div>
+    </div>
+
+    <div
+        aria-live="polite"
+        aria-atomic="true"
+        class="_hiddenErrorsContainer_f5i74_38"
+    ></div>
+</div>
+
+# mã gửi về mail
+<div class="viewer-mail__body">
+    <div class="viewer-code-card">
+        <div class="viewer-code-card__head">
+            <span class="viewer-code-card__label">
+                Mã đã phát hiện
+            </span>
+
+            <button
+                class="copy-code-button"
+                type="button"
+                data-action="copy-code"
+                data-code="254096"
+            >
+                Sao chép mã
+            </button>
+        </div>
+
+        <div class="viewer-code-card__value">
+            254096
+        </div>
+    </div>
+</div>
+
+# nút tiếp tục sau khi nhập mã
+<div class="_wrapper_2sicu_55">
+    <button
+        class="_root_2sicu_62 _primary_2sicu_111"
+        aria-describedby=""
+        aria-disabled="false"
+        data-dd-action-name="Continue"
+        type="submit"
+        value="validate"
+        name="intent"
+    >
+        Continue
+    </button>
+</div>
+
+# nơi nhập tên
+<div class="react-aria-TextField" data-rac="">
+    <div class="_root_1i5mj_51">
+        <div class="_fieldFootprint_1i5mj_59 _typeable_1i5mj_74">
+            <label
+                class="_typeableLabel_1i5mj_74"
+                id="react-aria4197836859-_r_6_"
+                for="_r_3_-name"
+            >
+                <div class="_typeableLabelTextPositioner_1i5mj_88">
+                    <div class="_typeableLabelText_1i5mj_88">
+                        Họ và tên
+                    </div>
+                </div>
+            </label>
+
+            <input
+                id="_r_3_-name"
+                required=""
+                autocomplete="name"
+                placeholder="Họ và tên"
+                aria-labelledby="react-aria4197836859-_r_6_"
+                class="_input_1kwl2_1 _target_1i5mj_134"
+                form="_r_3_"
+                data-rac=""
+                type="text"
+                value=""
+                name="name"
+                aria-describedby="_r_3_-name-error"
+                aria-invalid="true"
+                data-invalid="true"
+            >
+        </div>
+
+        <span
+            aria-live="polite"
+            aria-atomic="true"
+        ></span>
+    </div>
+</div>
+
+# nhập tuổi
+<div class="_ageFallbackAgeInput_yu8kw_38" data-rac="">
+    <div class="_root_1i5mj_51">
+        <div class="_fieldFootprint_1i5mj_59 _typeable_1i5mj_74">
+            <label
+                class="_typeableLabel_1i5mj_74"
+                id="react-aria4197836859-_r_b_"
+                for="_r_3_-age"
+            >
+                <div class="_typeableLabelTextPositioner_1i5mj_88">
+                    <div class="_typeableLabelText_1i5mj_88">
+                        Tuổi
+                    </div>
+                </div>
+            </label>
+
+            <input
+                id="_r_3_-age"
+                required=""
+                autocomplete="off"
+                placeholder="Tuổi"
+                inputmode="numeric"
+                aria-labelledby="react-aria4197836859-_r_b_"
+                class="_input_1kwl2_1 _target_1i5mj_134"
+                min="5"
+                max="130"
+                step="1"
+                form="_r_3_"
+                data-rac=""
+                type="number"
+                value=""
+                name="age"
+            >
+        </div>
+
+        <span
+            aria-live="polite"
+            aria-atomic="true"
+        ></span>
+    </div>
+</div>
+
+# continue sau khi nhập tên và tuổi
+<div class="_wrapper_2sicu_55">
+    <button
+        class="_root_2sicu_62 _primary_2sicu_111"
+        aria-describedby=""
+        aria-disabled="false"
+        data-dd-action-name="Continue"
+        type="submit"
+    >
+        Hoàn tất tạo tài khoản
+    </button>
+</div>
+
+# nút tiếp tục cuối
+<button
+    class="btn relative group-focus-within/dialog:focus-visible:[outline-width:1.5px] group-focus-within/dialog:focus-visible:[outline-offset:2.5px] group-focus-within/dialog:focus-visible:[outline-style:solid] group-focus-within/dialog:focus-visible:[outline-color:var(--text-primary)] btn-primary btn-large w-full"
+>
+    <div class="flex items-center justify-center">
+        Continue
+    </div>
+</button>
+
+# logo profile
+<div class="flex items-center justify-center [opacity:var(--menu-item-icon-opacity,1)] icon-lg">
+    <div
+        class="overflow-hidden rounded-full bg-gray-500/30 select-none h-6 w-6 shrink-0 bg-token-bg-tertiary"
+    >
+        <img
+            alt=""
+            class="h-6 w-6 shrink-0 bg-token-bg-tertiary"
+            referrerpolicy="no-referrer"
+            src="https://cdn.auth0.com/avatars/hb.png"
+        >
+    </div>
+</div>
+
+# nút setting
+<div
+    role="menuitem"
+    tabindex="0"
+    class="group __menu-item gap-1.5"
+    data-testid="settings-menu-item"
+    data-orientation="vertical"
+    data-radix-collection-item=""
+>
+    <div class="flex items-center justify-center [opacity:var(--menu-item-icon-opacity,1)] icon">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            class="icon"
+        >
+            <use
+                href="/cdn/assets/sprites-core-c0ff488a.svg#44c6db"
+                fill="currentColor"
+            ></use>
+        </svg>
+    </div>
+
+    Settings
+</div>
+
+
+# nút security and login
+
+<button
+    type="button"
+    role="tab"
+    aria-selected="false"
+    aria-controls="radix-_r_21_-content-Security"
+    data-state="inactive"
+    id="radix-_r_21_-trigger-Security"
+    tabindex="0"
+    data-fill=""
+    class="group __menu-item hoverable gap-1.5 dark:max-md:data-[state=active]:bg-token-bg-elevated-secondary dark-oled:data-[state=active]:bg-token-bg-secondary"
+    data-testid="security-tab"
+    data-orientation="vertical"
+    data-radix-collection-item=""
+>
+    <div class="flex items-center justify-center [opacity:var(--menu-item-icon-opacity,1)] icon">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            class="icon"
+        >
+            <use
+                href="/cdn/assets/sprites-core-c0ff488a.svg#aa2e8a"
+                fill="currentColor"
+            ></use>
+        </svg>
+    </div>
+
+    <div class="flex min-w-0 grow items-center gap-2.5">
+        <div class="truncate">
+            Security and login
+        </div>
+    </div>
+</button>
+
+# nhập code để đặt pass
+<div class="_section_f5i74_7 _fields_f5i74_53">
+    <div class="react-aria-TextField" data-rac="">
+        <div class="_root_1i5mj_51">
+            <div class="_fieldFootprint_1i5mj_59 _typeable_1i5mj_74">
+                <label
+                    class="_typeableLabel_1i5mj_74"
+                    id="react-aria-_R_dhj5H1_"
+                    for="_R_35H5_-code"
+                >
+                    <div class="_typeableLabelTextPositioner_1i5mj_88">
+                        <div class="_typeableLabelText_1i5mj_88">
+                            Code
+                        </div>
+                    </div>
+                </label>
+
+                <input
+                    aria-describedby="_R_35H1_"
+                    id="_R_35H5_-code"
+                    type="text"
+                    autocomplete="one-time-code"
+                    maxlength="6"
+                    placeholder="Code"
+                    inputmode="numeric"
+                    aria-labelledby="react-aria-_R_dhj5H1_"
+                    class="_input_1kwl2_1 _target_1i5mj_134"
+                    autofocus=""
+                    form="_R_35H5_"
+                    data-rac=""
+                    name="code"
+                    value=""
+                >
+            </div>
+
+            <span
+                aria-live="polite"
+                aria-atomic="true"
+            ></span>
+        </div>
+    </div>
+
+    <div
+        aria-live="polite"
+        aria-atomic="true"
+        class="_hiddenErrorsContainer_f5i74_38"
+    ></div>
+</div>
+
+# nơi nhập pass
+<div class="react-aria-TextField" data-rac="">
+    <div class="_root_1i5mj_51">
+        <div class="_fieldFootprint_1i5mj_59 _typeable_1i5mj_74">
+            <label
+                class="_typeableLabel_1i5mj_74"
+                id="react-aria3091809356-_r_7_"
+                for="_r_3_-new-password"
+            >
+                <div class="_typeableLabelTextPositioner_1i5mj_88">
+                    <div class="_typeableLabelText_1i5mj_88">
+                        Mật khẩu mới
+                    </div>
+                </div>
+            </label>
+
+            <input
+                aria-describedby="_r_1_ _r_2_"
+                id="_r_3_-new-password"
+                autocomplete="new-password"
+                placeholder="Mật khẩu mới"
+                aria-labelledby="react-aria3091809356-_r_7_"
+                class="_input_1kwl2_1 _target_1i5mj_134"
+                spellcheck="false"
+                form="_r_3_"
+                data-rac=""
+                type="password"
+                value=""
+                name="new-password"
+            >
+
+            <div class="_endDecoration_1kwl2_13">
+                <div>
+                    <button
+                        type="button"
+                        aria-label="Hiện mật khẩu"
+                        aria-controls="_r_3_-new-password"
+                        aria-pressed="false"
+                        class="_toggleVisibilityButton_1x7iz_1 _root_l0v7g_1"
+                        data-rac=""
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M5.91444 7.59106C4.3419 9.04124 3.28865 10.7415 2.77052 11.6971C2.66585 11.8902 2.66585 12.1098 2.77052 12.3029C3.28865 13.2585 4.3419 14.9588 5.91444 16.4089C7.48195 17.8545 9.50572 19 12 19C14.4943 19 16.518 17.8545 18.0855 16.4089C19.6581 14.9588 20.7113 13.2585 21.2295 12.3029C21.3341 12.1098 21.3341 11.8902 21.2295 11.6971C20.7113 10.7415 19.6581 9.04124 18.0855 7.59105C16.518 6.1455 14.4943 5 12 5C9.50572 5 7.48195 6.1455 5.91444 7.59106ZM4.55857 6.1208C6.36059 4.45899 8.84581 3 12 3C15.1542 3 17.6394 4.45899 19.4414 6.1208C21.2384 7.77798 22.4152 9.68799 22.9877 10.7438C23.4147 11.5315 23.4147 12.4685 22.9877 13.2562C22.4152 14.312 21.2384 16.222 19.4414 17.8792C17.6394 19.541 15.1542 21 12 21C8.84581 21 6.36059 19.541 4.55857 17.8792C2.76159 16.222 1.58478 14.312 1.01232 13.2562C0.58525 12.4685 0.585249 11.5315 1.01232 10.7438C1.58478 9.688 2.76159 7.77798 4.55857 6.1208ZM12 9.5C10.6193 9.5 9.49999 10.6193 9.49999 12C9.49999 13.3807 10.6193 14.5 12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5ZM7.49999 12C7.49999 9.51472 9.51471 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51471 16.5 7.49999 14.4853 7.49999 12Z"
+                                fill="currentColor"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <span
+            aria-live="polite"
+            aria-atomic="true"
+        ></span>
+    </div>
+</div> 
+
+
+# nút adđ password
+<div class="text-token-text-secondary flex min-h-[38px] items-center ps-3">
+    <div class="me-1 flex items-center whitespace-nowrap">
+        Thêm
+    </div>
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        aria-hidden="true"
+        data-rtl-flip=""
+        class="icon-sm"
+    >
+        <use
+            href="/cdn/assets/sprites-core-c843cdbd.svg#d3876b"
+            fill="currentColor"
+        ></use>
+    </svg>
+</div>
+
+# nút login mailtemp
+<span class="account-popover__avatar" aria-hidden="true">PC</span>
+
+# chỗ điền pass mail
+<div class="account-popover__password-wrap">
+    <input
+        id="public-login-password"
+        type="password"
+        value="BoKKGfEVEx"
+        placeholder="Nhập mật khẩu hộp thư"
+    >
+    <button
+        class="account-popover__password-toggle"
+        id="toggle-login-password"
+        type="button"
+    >
+        Hiện
+    </button>
+</div>
+
+# nút đăng nhập
+<button
+    class="account-popover__button"
+    id="login-mailbox"
+    type="button"
+>
+    Đăng nhập
+</button>

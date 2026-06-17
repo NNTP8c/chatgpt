@@ -1,0 +1,68 @@
+[
+  {
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "platform": "Win32",
+    "hardware_concurrency": 8,
+    "device_memory": 8,
+    "languages": ["vi-VN", "vi", "en-US", "en"],
+    "locale": "vi-VN",
+    "timezone_id": "Asia/Ho_Chi_Minh",
+    "viewport": {"width": 1920, "height": 1080},
+    "screen": {"width": 1920, "height": 1080}
+  },
+  {
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0",
+    "platform": "Win32",
+    "hardware_concurrency": 16,
+    "device_memory": 16,
+    "languages": ["vi-VN", "vi", "en-US", "en"],
+    "locale": "vi-VN",
+    "timezone_id": "Asia/Ho_Chi_Minh",
+    "viewport": {"width": 1536, "height": 864},
+    "screen": {"width": 1536, "height": 864}
+  },
+  {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "platform": "MacIntel",
+    "hardware_concurrency": 8,
+    "device_memory": 16,
+    "languages": ["en-US", "en"],
+    "locale": "en-US",
+    "timezone_id": "America/New_York",
+    "viewport": {"width": 1440, "height": 900},
+    "screen": {"width": 1440, "height": 900}
+  },
+  {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15",
+    "platform": "MacIntel",
+    "hardware_concurrency": 8,
+    "device_memory": 8,
+    "languages": ["en-US", "en"],
+    "locale": "en-US",
+    "timezone_id": "America/Los_Angeles",
+    "viewport": {"width": 1440, "height": 900},
+    "screen": {"width": 1440, "height": 900}
+  },
+  {
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0",
+    "platform": "Win32",
+    "hardware_concurrency": 8,
+    "device_memory": 8,
+    "languages": ["en-US", "en", "vi"],
+    "locale": "en-US",
+    "timezone_id": "Asia/Ho_Chi_Minh",
+    "viewport": {"width": 1366, "height": 768},
+    "screen": {"width": 1366, "height": 768}
+  },
+  {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0",
+    "platform": "MacIntel",
+    "hardware_concurrency": 4,
+    "device_memory": 8,
+    "languages": ["en-GB", "en", "en-US"],
+    "locale": "en-GB",
+    "timezone_id": "Europe/London",
+    "viewport": {"width": 1280, "height": 800},
+    "screen": {"width": 1280, "height": 800}
+  }
+]
