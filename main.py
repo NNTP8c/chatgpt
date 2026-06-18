@@ -155,9 +155,16 @@ with sync_playwright() as p:
 
             # Lấy mã xác nhận từ mailtemp.vn
             page_mail.bring_to_front()
-            page_mail.wait_for_selector("button.copy-code-button")
-            _pass = page_mail.locator("button.copy-code-button").get_attribute("data-code")
-            print(f"Mã xác nhận: {_pass}")
+            # page_mail.wait_for_selector("button.copy-code-button")
+            # code = page_mail.locator("button.copy-code-button").get_attribute("data-code")
+            # print(f"Mã xác nhận: {code}")
+            # page_mail.wait_for_timeout(2000)
+
+            page_mail.locator(
+                'article:has(span:text-is("vừa xong")) button[data-action="read-full-message"]'
+            ).click()  
+            code = page_mail.locator(".viewer-code-card__value").text_content().strip()
+            print(f"Mã xác nhận: {code}")
             page_mail.wait_for_timeout(2000)
 
 
@@ -165,7 +172,7 @@ with sync_playwright() as p:
             page_gpt.bring_to_front()
             code_input = page_gpt.locator('input[name="code"]')
             code_input.wait_for(state="visible")
-            code_input.fill(_pass)
+            code_input.fill(code)
             page_gpt.wait_for_timeout(2000)
             page_gpt.locator('button[name="intent"][value="validate"]').click()
             page_gpt.wait_for_timeout(5000)

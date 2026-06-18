@@ -136,22 +136,26 @@ with sync_playwright() as p:
             btn_submit_mail.click()
             page_mail.wait_for_timeout(5000)
 
-            vua_xong = page_mail.locator('article.message-item:has-text("vừa xong")')
-            vua_xong.wait_for(state="visible", timeout=10000)
-            vua_xong.click()
-            _pass = page_mail.locator("button.copy-code-button").get_attribute("data-code")
-            print(f"Mã xác nhận: {_pass}")
+            page_mail.locator(
+                'article:has(span:text-is("vừa xong")) button[data-action="read-full-message"]'
+            ).click()  
+
+            code = page_mail.locator(".viewer-code-card__value").text_content().strip()
+            print(code)
 
             page_gpt.bring_to_front()
-            page_gpt.locator('input[name="code"]').wait_for()
-            page_gpt.locator('input[name="code"]').fill(_pass)
-            page_gpt.get_by_role("button", name="Tiếp tục").click()
+            page_gpt.locator('#_R_35H5_-code').fill(code)
+            page_gpt.wait_for_timeout(2000)
+            page_gpt.locator('button[type="submit"][value="validate"]').click()
+            page_gpt.wait_for_timeout(5000)
 
-            password = "MyPassword123@"
-            page_gpt.wait_for_selector('input[name="new-password"]')
+            password = "YourPassword123!"
             page_gpt.locator('input[name="new-password"]').fill(password)
+            page_gpt.wait_for_timeout(1000)
             page_gpt.locator('input[name="confirm-password"]').fill(password)
-            page_gpt.locator('button[type="submit"]').click()   
+            page_gpt.wait_for_timeout(1000)
+            page_gpt.locator('button[data-dd-action-name="Continue"]').click()
+            page_gpt.wait_for_timeout(5000)
 
         except Exception as e:
             print(f"Có lỗi xảy ra ở vòng lặp thứ {iteration}: {e}")
